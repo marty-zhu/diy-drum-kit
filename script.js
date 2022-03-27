@@ -6,7 +6,7 @@ for (let key of keys) {
 }
 
 document.addEventListener('keydown', (e) => {
-    console.log(e.keyCode);
+    // console.log(e.keyCode);  // kept for easier maintenance
     if (Object.keys(keyState).includes(`${e.keyCode}`)) {
         if (!keyState[e.keyCode]) {
             let key = document.querySelector(`div.key[data-key="${e.keyCode}"]`);
