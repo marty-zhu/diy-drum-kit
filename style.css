@@ -31,3 +31,17 @@ div.key {
     height: auto;
     border: 2px solid black;
 }
+
+div.key kbd {
+    font-size: 36px;
+    margin: 0;
+}
+
+div.key p {
+    padding: 0;
+    margin: 2px;
+}
+
+audio {
+    display: none;
+}
