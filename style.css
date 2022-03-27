@@ -33,15 +33,16 @@ div.key {
     align-items: center;
     width: 70px;
     height: auto;
-    border: 2px solid black;
+    border: 2px solid #eee;
     background-color: rgb(50, 50, 50, 0.5);
+    color: #eee;
 }
 
-.strike {
+div.key.strike {
     transform: scale(1.1);
-    border: 3px solid gold;
+    border: 2px solid gold;
     background-color: black;
-    color: white;
+    color: gold;
 }
 
 div.key kbd {
