@@ -16,7 +16,15 @@ div#content {
 h1 {
     text-align: center;
 }
+
 div.keys {
     display: flex;
     justify-content: space-evenly;
+}
+
+div.key {
+    text-align: center;
+    width: 100px;
+    height: auto;
+    border: 2px solid black;
 }
