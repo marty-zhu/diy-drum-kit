@@ -7,6 +7,9 @@ body {
     justify-content: center;
     align-items: center;
     background-image: url(./imgs/stage2.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 div#content {
@@ -17,7 +20,7 @@ div#content {
 h1 {
     text-align: center;
     background-color: rgb(50, 50, 50, 0.7);
-    border: 1px solid #ddd;
+    border: 2px dotted #ddd;
     color: #ddd;
 }
 
