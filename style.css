@@ -19,7 +19,7 @@ h1 {
 
 div.keys {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 div.key {
@@ -27,7 +27,7 @@ div.key {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    width: 100px;
+    width: 70px;
     height: auto;
     border: 2px solid black;
 }
