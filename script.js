@@ -10,5 +10,8 @@ document.addEventListener('keydown', (e) => {
 
 document.addEventListener('keyup', (e) => {
     let key = document.querySelector(`div.key[data-key="${e.keyCode}"]`);
+    let keyAudio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    keyAudio.pause();
+    keyAudio.currentTime = 0;
     key.classList.remove('strike');
 });
