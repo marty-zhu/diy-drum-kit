@@ -7,13 +7,15 @@ for (let key of keys) {
 
 document.addEventListener('keydown', (e) => {
     console.log(e.keyCode);
-    if (!keyState[e.keyCode]) {
-        let key = document.querySelector(`div.key[data-key="${e.keyCode}"]`);
-        let keyAudio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-        keyAudio.play();
-        key.classList.add('strike');
-        keyState[e.keyCode] = true;
-    };
+    if (Object.keys(keyState).includes(`${e.keyCode}`)) {
+        if (!keyState[e.keyCode]) {
+            let key = document.querySelector(`div.key[data-key="${e.keyCode}"]`);
+            let keyAudio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+            keyAudio.play();
+            key.classList.add('strike');
+            keyState[e.keyCode] = true;
+        };
+    }
 });
 
 document.addEventListener('keyup', (e) => {
