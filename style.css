@@ -32,6 +32,13 @@ div.key {
     border: 2px solid black;
 }
 
+.strike {
+    transform: scale(1.1);
+    border: 3px solid gold;
+    background-color: black;
+    color: white;
+}
+
 div.key kbd {
     font-size: 36px;
     margin: 0;
