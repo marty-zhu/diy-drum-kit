@@ -1,11 +1,15 @@
-const keys = document.querySelectorAll('div.key');
+function getKeyState() {
+    // a recordkeeper for whether a key is being held down
+    const keys = document.querySelectorAll('div.key');
 
-let keyState = {};
-for (let key of keys) {
-    keyState[key.getAttribute('data-key')] = false;
-}
+    let keyState = {};
+    for (let key of keys) {
+        keyState[key.getAttribute('data-key')] = false;
+    };
+    return keyState;
+};
 
-document.addEventListener('keydown', (e) => {
+function playSound(e) {
     if (Object.keys(keyState).includes(`${e.keyCode}`)) {
         if (!keyState[e.keyCode]) {
             let key = document.querySelector(`div.key[data-key="${e.keyCode}"]`);
@@ -16,13 +20,17 @@ document.addEventListener('keydown', (e) => {
             key.classList.add('strike');
             keyState[e.keyCode] = true;
         };
-    }
-});
+    };
+};
 
-document.addEventListener('keyup', (e) => {
+function removeHighlight(e) {
     if (keyState[e.keyCode]) {
         let key = document.querySelector(`div.key[data-key="${e.keyCode}"]`);
         key.classList.remove('strike');
         keyState[e.keyCode] = false;
     };
-});
+};
+
+let keyState = getKeyState();
+document.addEventListener('keydown', playSound);
+document.addEventListener('keyup', removeHighlight);
